@@ -9,7 +9,7 @@ let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
 
-
+//Questions Array
 let questions = [
   {
     question: "What's the biggest animal in the world?",
@@ -58,49 +58,41 @@ let questions = [
     choice3: "Hydrogen + Helium",
     choice4: "Oxygen + Hydrogen",
     answer: 4
+  },
+  {
+    question: "What food item is classified as a complex carbonhydrate?",
+    choice1: "White Rice",
+    choice2: "Sweet Potatoes",
+    choice3: "Soda",
+    choice4: "French Bread",
+    answer: 2
+  },
+  {
+    question: "In the anime series DragonBall Z, what was Goku's saiyan name?",
+    choice1: "Kakarot",
+    choice2: "Raditz",
+    choice3: "Bardock",
+    choice4: "Broly",
+    answer: 1
   }
 ];
 
-//CONSTANTS
-const rightAnswers = 5;
-const maxQuestions = 6;
+//Constants
+const rightAnswers = 25;
+const maxQuestions = 4;
 
 startGame = () => {
   questionCounter = 0;
   score = 0;
+  //Spread operator for full copy of questions from questions array to available questions
   availableQuesions = [...questions];
+  console.log(availableQuesions);
   getNewQuestion();
-  //console.log(getNewQuestion());
 };
-
-document.getElementById('timer').innerHTML =
-  002 + ":" + 30;
-startTimer();
-
-function startTimer() {
-  var presentTime = document.getElementById('timer').innerHTML;
-  var timeArray = presentTime.split(/[:]+/);
-  var m = timeArray[0];
-  var s = checkSecond((timeArray[1] - 1));
-  if(s==59){m=m-1}
-  //if(m<0){alert('timer completed')}
-  
-  document.getElementById('timer').innerHTML =
-    m + ":" + s;
-  setTimeout(startTimer, 1000);
-}
-
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-  if (sec < 0) {sec = "59"};
-  return sec;
-}
-
 
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
     localStorage.setItem("mostRecentScore", score);
-    //go to the end page
     return window.location.assign("./end.html");
   }
   questionCounter++;
@@ -133,7 +125,8 @@ choices.forEach(choice => {
     if (classToApply === "correct") {
       incrementScore(rightAnswers);
     }
-
+    
+    //Correct & Incorrect color indicators
     selectedChoice.parentElement.classList.add(classToApply);
 
     setTimeout(() => {
@@ -149,3 +142,26 @@ incrementScore = num => {
 };
 
 startGame();
+
+document.getElementById('timer').innerHTML =
+  001 + ":" + 30;
+startTimer();
+
+function startTimer() {
+  var presentTime = document.getElementById('timer').innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond((timeArray[1] - 1));
+  if(s==59){m=m-1}
+  //if(m<0){alert('timer completed')}
+  
+  document.getElementById('timer').innerHTML =
+    m + ":" + s;
+  setTimeout(startTimer, 1000);
+}
+
+function checkSecond(sec) {
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
+}
