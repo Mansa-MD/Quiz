@@ -1,8 +1,8 @@
-# Responsive_Portfolio
+# Random Quiz!
 
-*Created an application using HTML, CSS, Bootstrap and JavaScript code to generate a quiz with a time limit of 2 minutes and 30 seconds for user to answer a series of random questions. This app will run in the browser and feature a clean, polished, responsive user interface. Ensuring that it adapts to multiple screen sizes.
+*Created an application using HTML, CSS, Bootstrap and JavaScript code to generate a quiz with a time limit of 1 minutes and 30 seconds for user to answer a series of random questions. This app will run in the browser and feature a clean, polished, responsive user interface. Ensuring that it adapts to multiple screen sizes.
 
-*Quiz application has two buttons on the Home screen; Start and Highscore
+*Quiz application has two buttons on the home screen; start and highscores. Click the start button to begin quiz and click highscores button to view the highest achieved.
 
 *The quiz application is fully viewable and compatible on desktop and mobile screen.
 
