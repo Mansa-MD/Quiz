@@ -36,7 +36,7 @@ let questions = [
     answer: 4
   },
   {
-    question: "To a single decimal point, many kilometers in a mile?",
+    question: "To a single decimal point, how many kilometers in a mile?",
     choice1: "3.6 km",
     choice2: "1.6 km",
     choice3: "1.0 km",
@@ -74,7 +74,7 @@ startGame = () => {
 };
 
 document.getElementById('timer').innerHTML =
-  005 + ":" + 00;
+  002 + ":" + 30;
 startTimer();
 
 function startTimer() {
