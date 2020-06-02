@@ -12,35 +12,58 @@ let availableQuesions = [];
 
 let questions = [
   {
-    question: "Inside which HTML element do we put the JavaScript??",
-    choice1: "<script>",
-    choice2: "<javascript>",
-    choice3: "<js>",
-    choice4: "<scripting>",
+    question: "What's the biggest animal in the world?",
+    choice1: "Blue Whale",
+    choice2: "Elephant",
+    choice3: "Rhinoceros",
+    choice4: "Polar Bear",
     answer: 1
   },
   {
-    question:
-      "What is the correct syntax for referring to an external script called 'xxx.js'?",
-    choice1: "<script href='xxx.js'>",
-    choice2: "<script name='xxx.js'>",
-    choice3: "<script src='xxx.js'>",
-    choice4: "<script file='xxx.js'>",
+    question: "Who painted the Mona Lisa?",
+    choice1: "Vincent van Gogh",
+    choice2: "Michelangelo di Lodovico",
+    choice3: "Leonardo da Vinci",
+    choice4: "Pablo Ruiz Picasso",
     answer: 3
   },
   {
-    question: " How do you write 'Hello World' in an alert box?",
-    choice1: "msgBox('Hello World');",
-    choice2: "alertBox('Hello World');",
-    choice3: "msg('Hello World');",
-    choice4: "alert('Hello World');",
+    question: "What is the capital of Iceland?",
+    choice1: "Hofn",
+    choice2: "Akureyri",
+    choice3: "Vik",
+    choice4: "Reykjavík",
+    answer: 4
+  },
+  {
+    question: "To a single decimal point, many kilometers in a mile?",
+    choice1: "3.6 km",
+    choice2: "1.6 km",
+    choice3: "1.0 km",
+    choice4: "5.8 km",
+    answer: 2
+  },
+  {
+    question: "What nut is in the middle of a Ferrero Rocher?",
+    choice1: "Pistachios",
+    choice2: "Almond",
+    choice3: "Hazelnut",
+    choice4: "Peanut",
+    answer: 3
+  },
+  {
+    question: "What two elements are in water?",
+    choice1: "Estrogen + Hydrogen",
+    choice2: "Oxygen + Nitrogen ",
+    choice3: "Hydrogen + Helium",
+    choice4: "Oxygen + Hydrogen",
     answer: 4
   }
 ];
 
 //CONSTANTS
-const CORRECT_BONUS = 10;
-const MAX_QUESTIONS = 3;
+const rightAnswers = 5;
+const maxQuestions = 6;
 
 startGame = () => {
   questionCounter = 0;
@@ -75,13 +98,13 @@ function checkSecond(sec) {
 
 
 getNewQuestion = () => {
-  if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+  if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
     localStorage.setItem("mostRecentScore", score);
     //go to the end page
     return window.location.assign("./end.html");
   }
   questionCounter++;
-  questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+  questionCounterText.innerText = `${questionCounter}/${maxQuestions}`;
 
   const questionIndex = Math.floor(Math.random() * availableQuesions.length);
   currentQuestion = availableQuesions[questionIndex];
@@ -108,7 +131,7 @@ choices.forEach(choice => {
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
       console.log(classToApply);
     if (classToApply === "correct") {
-      incrementScore(CORRECT_BONUS);
+      incrementScore(rightAnswers);
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
