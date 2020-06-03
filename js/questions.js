@@ -3,6 +3,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 
+
 let currentQuestion = {};
 let acceptingAnswers = false;
 let score = 0;
@@ -90,6 +91,7 @@ startGame = () => {
   getNewQuestion();
 };
 
+//New question after previou questions has been answer
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
     localStorage.setItem("mostRecentScore", score);
@@ -153,15 +155,14 @@ function startTimer() {
   var m = timeArray[0];
   var s = checkSecond((timeArray[1] - 1));
   if(s==59){m=m-1}
-  //if(m<0){alert('timer completed')}
-  
+
   document.getElementById('timer').innerHTML =
     m + ":" + s;
   setTimeout(startTimer, 1000);
 }
 
 function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 10 && sec >= 0) {sec = "0" + sec};
   if (sec < 0) {sec = "59"};
   return sec;
 }
