@@ -146,7 +146,7 @@ incrementScore = num => {
 startGame();
 
 document.getElementById('timer').innerHTML =
-  001 + ":" + 30;
+  002 + ":" + 00;
 startTimer();
 
 function startTimer() {
