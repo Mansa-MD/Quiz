@@ -4,9 +4,9 @@
 
 *Quiz application has two buttons on the home screen; start and highscores. Click the start button to begin quiz and click highscores button to view the highest achieved.
 
-*User will score 25 points for each correct answer and 0 points for each incorrect answer. Correct answers will be highlighted green and incorrect highlighted green.
+*User will score 20 points for each correct answer and 0 points for each incorrect answer. Correct answers will be highlighted green and incorrect highlighted red.
 
-*At the end of the quiz the user will have the options of saving thier score by typing thier name in the username box above the save button
+*At the end of the quiz the user will have the options of saving thier score by typing thier name in the username box above the save button.
 
 *The quiz application is fully funtionally, viewable, and compatible on desktop and mobile screen.
 
