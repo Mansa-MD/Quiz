@@ -2,7 +2,7 @@
 
 *Created an application using HTML, CSS, Bootstrap and JavaScript code to generate a quiz with a time limit of 60 seconds for user to answer a series of random questions. This app will run in the browser and feature a clean, polished, responsive user interface. Ensuring that it adapts to multiple screen sizes.
 
-*Quiz application has two buttons on the home screen; start and highscores. Click the start button to begin quiz and click highscores button to view the highest achieved.
+*Quiz application has two buttons on the home screen; start and highscores. Click the start button to begin quiz and click highscores button to view the highest score achieved.
 
 *User will score 20 points for each correct answer and 0 points for each incorrect answer. Correct answers will be highlighted green and incorrect highlighted red.
 
@@ -18,7 +18,7 @@
 
 *Quiz - Mobile Responsive Image:
 
-*![](assets/M_RP.jpg)
+*![](assets/MB_RP.jpg)
 
 
 
