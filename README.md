@@ -18,7 +18,7 @@
 
 *Quiz - Mobile Responsive Image:
 
-*![](assets/MB_RP.jpg)
+*![](assets/M_RP.jpg)
 
 
 

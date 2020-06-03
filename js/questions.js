@@ -137,7 +137,7 @@ choices.forEach(choice => {
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
       console.log(classToApply);
     if (classToApply === "correct") { incrementScore(rightAnswers);}
-    
+  
     //Correct & Incorrect color indicators
     selectedChoice.parentElement.classList.add(classToApply);
 

@@ -153,6 +153,7 @@ input::placeholder {
   width: 100%;
 }
 
+/*Correct & Incorrect color indicators*/
 .correct {
   background-color: darkgreen;
 }
@@ -161,7 +162,7 @@ input::placeholder {
   background-color: darkred;
 }
 
-/*Hud*/
+/*Head Over Display*/
 #hud {
   display: flex;
   justify-content: space-between;
