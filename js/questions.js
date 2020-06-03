@@ -9,6 +9,7 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
+let count = 59;
 
 //Questions Array
 let questions = [
@@ -79,8 +80,8 @@ let questions = [
 ];
 
 //Constants
-const rightAnswers = 25;
-const maxQuestions = 4;
+const rightAnswers = 20;
+const maxQuestions = 5;
 
 startGame = () => {
   questionCounter = 0;
@@ -91,12 +92,19 @@ startGame = () => {
   getNewQuestion();
 };
 
-//New question after previou questions has been answer
+//Countdown timer
+timer = setInterval(function() {
+  $("#timer").html(count--);
+  if(count == -1) clearInterval(timer);
+}, 1000);
+
+//New question after previous question has been answer
 getNewQuestion = () => {
   if (availableQuesions.length === 0 || questionCounter >= maxQuestions) {
     localStorage.setItem("mostRecentScore", score);
     return window.location.assign("./end.html");
   }
+
   questionCounter++;
   questionCounterText.innerText = `${questionCounter}/${maxQuestions}`;
 
@@ -144,25 +152,3 @@ incrementScore = num => {
 };
 
 startGame();
-
-document.getElementById('timer').innerHTML =
-  002 + ":" + 00;
-startTimer();
-
-function startTimer() {
-  var presentTime = document.getElementById('timer').innerHTML;
-  var timeArray = presentTime.split(/[:]+/);
-  var m = timeArray[0];
-  var s = checkSecond((timeArray[1] - 1));
-  if(s==59){m=m-1}
-
-  document.getElementById('timer').innerHTML =
-    m + ":" + s;
-  setTimeout(startTimer, 1000);
-}
-
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec};
-  if (sec < 0) {sec = "59"};
-  return sec;
-}
