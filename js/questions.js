@@ -95,7 +95,11 @@ startGame = () => {
 //Countdown timer
 timer = setInterval(function() {
   $("#timer").html(count--);
-  if(count == -1) clearInterval(timer);
+  if(count == -1) {
+    clearInterval(timer);
+    localStorage.setItem("mostRecentScore", score);
+    return window.location.assign("./end.html");
+  }  
 }, 1000);
 
 //New question after previous question has been answer
@@ -132,9 +136,7 @@ choices.forEach(choice => {
     const classToApply =
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
       console.log(classToApply);
-    if (classToApply === "correct") {
-      incrementScore(rightAnswers);
-    }
+    if (classToApply === "correct") { incrementScore(rightAnswers);}
     
     //Correct & Incorrect color indicators
     selectedChoice.parentElement.classList.add(classToApply);
