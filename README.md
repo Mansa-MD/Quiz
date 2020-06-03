@@ -14,7 +14,7 @@
 
 *Quiz Application Image: ![](assets/cc.jpg)
 
-*Quiz - Desktop Responsive Image: ![](assets/DT_RP.jpg)
+*Quiz - Desktop Responsive Image: ![](assets/D_RP.jpg)
 
 *Quiz - Mobile Responsive Image:
 
