@@ -14,6 +14,30 @@ let count = 59;
 //Questions Array
 let questions = [
   {
+    question: "Accoding to greek mythlogy, the name of Zeus father is ",
+    choice1: "Spartacus",
+    choice2: "Uranus",
+    choice3: "Kronos",
+    choice4: "Thanos",
+    answer: 3
+  },
+  {
+    question: "Which empire did Genghis Khan reign over?",
+    choice1: "Roman Empire",
+    choice2: "Byzantine Empire",
+    choice3: "Ottoman Empire",
+    choice4: "Mongol Empire",
+    answer: 4
+  },
+  {
+    question: "What is the square root of √2916?",
+    choice1: "54",
+    choice2: "244",
+    choice3: "84",
+    choice4: "24",
+    answer: 1
+  },
+  {
     question: "What's the biggest animal in the world?",
     choice1: "Blue Whale",
     choice2: "Elephant",
@@ -43,6 +67,14 @@ let questions = [
     choice2: "1.6 km",
     choice3: "1.0 km",
     choice4: "5.8 km",
+    answer: 2
+  },
+  {
+    question: "How much horsepower(hp) does the 2020 Koenigsegg Gemera have ?",
+    choice1: "1,900hp",
+    choice2: "1,700hp",
+    choice3: "1,500hp",
+    choice4: "2,000hp",
     answer: 2
   },
   {
@@ -76,12 +108,20 @@ let questions = [
     choice3: "Bardock",
     choice4: "Broly",
     answer: 1
+  },
+  {
+    question: "The expression \"if you want peace, prepare for war\" comes from the book \"      \"?",
+    choice1: "Eradicate All Oppositions",
+    choice2: "Ten Commandments of Strategy",
+    choice3: "Epitoma Rei Militaris",
+    choice4: "The Art of War",
+    answer: 3
   }
 ];
 
 //Constants
 const rightAnswers = 20;
-const maxQuestions = 5;
+const maxQuestions = 6;
 
 startGame = () => {
   questionCounter = 0;
@@ -99,7 +139,7 @@ timer = setInterval(function() {
     clearInterval(timer);
     localStorage.setItem("mostRecentScore", score);
     return window.location.assign("./end.html");
-  }  
+  } 
 }, 1000);
 
 //New question after previous question has been answer
