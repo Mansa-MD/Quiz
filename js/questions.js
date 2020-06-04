@@ -139,7 +139,7 @@ timer = setInterval(function() {
     clearInterval(timer);
     localStorage.setItem("mostRecentScore", score);
     return window.location.assign("./end.html");
-  } 
+  }
 }, 1000);
 
 //New question after previous question has been answer

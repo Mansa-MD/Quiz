@@ -1,6 +1,6 @@
 # Random Quiz!
 
-*Created an application using HTML, CSS, Bootstrap and JavaScript code to generate a quiz with a time limit of 60 seconds for user to answer a series of random questions. This app will run in the browser and feature a clean, polished, responsive user interface. Ensuring that it adapts to multiple screen sizes.
+*Created an application using html, css, bootstrap and javascript code to generate a quiz with a time limit of 60 seconds for user to answer a series of random questions, when the timer countdown reaches zero the quiz will end. This app will run in the browser and feature a clean, polished, responsive user interface. Ensuring that it adapts to multiple screen sizes.
 
 *Quiz application has two buttons on the home screen; start and highscores. Click the start button to begin quiz and click highscores button to view the highest score achieved.
 
